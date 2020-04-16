@@ -1,0 +1,19 @@
+@mixin gi-sidebar-nav-theme($theme) {
+  // $background: map-get($theme, "background");
+
+  // .gi-sidebar-container {
+  //   display: flex;
+  //   background-color: $background;
+  // }
+
+  .gi-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gi-sidebar-nav-item {
+    background-color: red;
+    color: white;
+    font-size: 1em;
+  }
+}

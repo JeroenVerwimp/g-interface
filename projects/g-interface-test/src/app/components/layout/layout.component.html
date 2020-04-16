@@ -1,0 +1,18 @@
+<gi-sidebar-container>
+  <gi-sidebar>
+
+    <gi-sidebar-nav [disabled]="true">
+
+      <gi-sidebar-nav-item>Non link</gi-sidebar-nav-item>
+      <a gi-sidebar-nav-item disabled routerLink="/">Home</a>
+      <a gi-sidebar-nav-item routerLink="/form">Form</a>
+
+    </gi-sidebar-nav>
+
+  </gi-sidebar>
+  <gi-sidebar-content>
+
+    <router-outlet></router-outlet>
+
+  </gi-sidebar-content>
+</gi-sidebar-container>

@@ -1,0 +1,9 @@
+@import "g-interface/theming";
+
+@include g-interface-core();
+
+$theme: (
+  background: pink,
+);
+
+@include g-interface-theme($theme);

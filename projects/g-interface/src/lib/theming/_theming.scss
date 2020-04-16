@@ -1,0 +1,15 @@
+@import "../sidebar/sidebar-theme";
+@import "../sidebar-nav/sidebar-nav-theme";
+
+@mixin g-interface-core() {
+  body,
+  html {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+@mixin g-interface-theme($theme) {
+  @include gi-sidebar-theme($theme);
+  @include gi-sidebar-nav-theme($theme);
+}

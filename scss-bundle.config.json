@@ -1,0 +1,7 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/g-interface/src/lib/theming/_theming.scss",
+    "rootDir": "./projects/g-interface/src/lib/",
+    "outFile": "dist/g-interface/_theming.scss"
+  }
+}
