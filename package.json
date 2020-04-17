@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:lib": "ng build g-interface && npm run build:lib:scss",
+    "build:lib:prod": "ng build g-interface --prod && npm run build:lib:scss",
     "build:lib:scss": "scss-bundle -c ./scss-bundle.config.json"
   },
   "private": true,

@@ -1,8 +1,12 @@
 @mixin gi-sidebar-theme($theme) {
-  $background: map-get($theme, "background");
+  $dark: map-get($theme, "dark");
 
   .gi-sidebar-container {
     display: flex;
-    background-color: $background;
+  }
+
+  .gi-sidebar-content {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
   }
 }

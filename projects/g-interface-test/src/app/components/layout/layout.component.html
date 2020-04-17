@@ -3,16 +3,62 @@
 
     <gi-sidebar-nav [disabled]="true">
 
-      <gi-sidebar-nav-item>Non link</gi-sidebar-nav-item>
-      <a gi-sidebar-nav-item disabled routerLink="/">Home</a>
-      <a gi-sidebar-nav-item routerLink="/form">Form</a>
+      <div class="nav-header">
+        <div class="logo">Admin</div>
+      </div>
+
+      <gi-sidebar-nav-header>Main navigation</gi-sidebar-nav-header>
+
+      <a gi-sidebar-nav-item [disabled]="true" routerLink="/" routerLinkActive="active">
+        <div class="nav-item">
+          <i class="material-icons-outlined">dashboard</i>
+          <span class="text">Dashboard</span>
+        </div>
+      </a>
+
+      <a gi-sidebar-nav-item routerLink="/form" routerLinkActive="active">
+        <div class="nav-item">
+          <i class="material-icons-outlined">check_box</i>
+          <span class="text">Form</span>
+        </div>
+      </a>
+
+      <a gi-sidebar-nav-item href="javascript:void(0)">
+        <div class="nav-item">
+          <i class="material-icons-outlined">open_in_new</i>
+          <span class="text">Master/Detail</span>
+        </div>
+      </a>
+      <a gi-sidebar-nav-item href="javascript:void(0)">
+        <div class="nav-item">
+          <i class="material-icons-outlined">toc</i>
+          <span class="text">Table</span>
+        </div>
+      </a>
+
+      <div class="flex-spacer"></div>
+
+      <gi-sidebar-nav-item>
+        <div class="nav-item">
+          <i class="material-icons-outlined">settings</i>
+          <span class="text">Settings</span>
+        </div>
+      </gi-sidebar-nav-item>
 
     </gi-sidebar-nav>
 
   </gi-sidebar>
   <gi-sidebar-content>
 
-    <router-outlet></router-outlet>
+    <gi-navbar>
+      Dashboard
+      <div class="flex-spacer"></div>
+      <i class="material-icons-outlined">notifications</i>
+    </gi-navbar>
+    
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
 
   </gi-sidebar-content>
 </gi-sidebar-container>

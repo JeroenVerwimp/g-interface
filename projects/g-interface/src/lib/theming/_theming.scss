@@ -1,5 +1,7 @@
 @import "../sidebar/sidebar-theme";
 @import "../sidebar-nav/sidebar-nav-theme";
+@import "../navbar/navbar-theme";
+@import "../form/form-theme";
 
 @mixin g-interface-core() {
   body,
@@ -7,9 +9,29 @@
     margin: 0;
     height: 100%;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .flex-spacer {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+}
+
+@mixin g-interface-core-theme($theme) {
+  $background: map-get($theme, "background");
+
+  body {
+    background-color: $background;
+  }
 }
 
 @mixin g-interface-theme($theme) {
+  @include g-interface-core-theme($theme);
   @include gi-sidebar-theme($theme);
   @include gi-sidebar-nav-theme($theme);
+  @include gi-navbar-theme($theme);
+  @include gi-form-theme($theme);
 }

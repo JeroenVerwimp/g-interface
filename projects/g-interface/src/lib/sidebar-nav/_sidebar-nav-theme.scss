@@ -1,19 +1,40 @@
 @mixin gi-sidebar-nav-theme($theme) {
-  // $background: map-get($theme, "background");
-
-  // .gi-sidebar-container {
-  //   display: flex;
-  //   background-color: $background;
-  // }
+  $dark: map-get($theme, "dark");
+  $light: map-get($theme, "light");
+  $text-light: map-get($theme, "text-light");
 
   .gi-sidebar-nav {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    background-color: $dark;
+    color: $text-light;
   }
 
   .gi-sidebar-nav-item {
-    background-color: red;
-    color: white;
+    flex-direction: row;
+    color: $text-light;
+    height: 45px;
     font-size: 1em;
+    padding: 10px 7.5px;
+  }
+
+  a.gi-sidebar-nav-item {
+    text-decoration: none;
+
+    &.active {
+      background-color: lighten($dark, 4);
+    }
+
+    &:hover {
+      background-color: lighten($dark, 6);
+    }
+  }
+
+  .gi-sidebar-nav-header {
+    padding: 10px 10px;
+    font-size: 0.7em;
+    text-decoration: underline;
+    text-transform: uppercase;
   }
 }

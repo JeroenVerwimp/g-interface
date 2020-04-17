@@ -1,0 +1,24 @@
+@mixin gi-navbar-theme($theme) {
+  $dark: map-get($theme, "dark");
+  $light: map-get($theme, "light");
+  $background: map-get($theme, "background");
+  $primary: map-get($theme, "primary");
+  $secondary: map-get($theme, "secondary");
+  $text-light: map-get($theme, "text-light");
+  $text-dark: map-get($theme, "text-dark");
+
+  .gi-navbar {
+    display: flex;
+    height: 55px;
+    background-color: lighten($dark, 5);
+    color: $text-light;
+    font-size: 1.5em;
+    padding: 13px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    -webkit-box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, 0.09);
+  }
+}

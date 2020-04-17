@@ -1,14 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 
 @Component({
   selector: "gi-sidebar",
   template: `<ng-content></ng-content>`,
   host: {
-    class: "gi-sidebar-content",
+    class: "gi-sidebar",
   },
+  encapsulation: ViewEncapsulation.None,
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

@@ -1,0 +1,49 @@
+$sidebar-nav-width: 230px
+
+.gi-sidebar-container
+  height: 100%
+  position: relative
+
+  .gi-sidebar-content
+    display: flex
+    flex-direction: column
+
+    .content
+      -webkit-flex-grow: 1
+      flex-grow: 1
+      padding: 20px
+      overflow-y: auto
+
+.gi-sidebar-nav-item
+  width: $sidebar-nav-width
+
+  .gi-sidebar-nav-item-content
+    background-color: red
+
+.nav-header
+  text-align: center
+  font-size: 1.5em
+  margin-bottom: 25px
+
+  .logo
+    height: 55px
+    padding: 13px
+    margin: 0 20px
+    border-bottom: 1px solid #fff
+    text-transform: uppercase
+    font-weight: 300
+    letter-spacing: 4px
+
+.nav-item
+  display: flex
+  flex-direction: row
+
+  i
+    display: block
+    margin-right: 7px
+
+  span
+    display: block
+    -webkit-flex-grow: 1
+    flex-grow: 1
+    padding-top: 2px

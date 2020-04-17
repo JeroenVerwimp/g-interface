@@ -1,0 +1,24 @@
+.form-group
+  margin-bottom: 10px
+
+  label
+    display: inline-block
+    margin-bottom: 2px
+    
+input[type=text], input[type=search], input[type=tel], input[type=email], input[type=url], input[type=password], textarea
+  width: 100%
+  padding: 10px 16px
+  border: 1px solid #ccc
+  display: inline-block
+  border-radius: 4px
+  resize: none
+  white-space: pre-wrap
+  
+  &.invalid
+    outline-color: firebrick !important
+    border: 1px solid firebrick !important
+
+.error
+  font-style: italic
+  color: firebrick
+  font-size: 0.7em

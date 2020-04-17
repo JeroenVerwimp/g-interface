@@ -4,6 +4,8 @@ import {
   ViewEncapsulation,
   Optional,
   AfterContentInit,
+  Directive,
+  ElementRef,
 } from "@angular/core";
 import { SidebarNavComponent } from "../..";
 
