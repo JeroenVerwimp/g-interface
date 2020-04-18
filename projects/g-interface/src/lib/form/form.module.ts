@@ -1,11 +1,11 @@
-import { NgModule, Component } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormGroupComponent } from "./form-group";
-import { GiInputDirective } from "./input";
+import { GiInputDirective, ButtonComponent } from "./input";
 
 @NgModule({
-  declarations: [FormGroupComponent, GiInputDirective],
+  declarations: [FormGroupComponent, GiInputDirective, ButtonComponent],
   imports: [CommonModule],
-  exports: [FormGroupComponent, GiInputDirective],
+  exports: [FormGroupComponent, GiInputDirective, ButtonComponent],
 })
 export class GiFormModule {}

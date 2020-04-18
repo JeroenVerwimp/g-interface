@@ -1,6 +1,27 @@
+@mixin gi-button-base($color) {
+  background-color: $color;
+
+  &.gi-button-disabled {
+    background-color: desaturate($color, 20);
+    cursor: default;
+  }
+}
+
 @mixin gi-form-theme($theme) {
+  $dark: map-get($theme, "dark");
+  $light: map-get($theme, "light");
+  $background: map-get($theme, "background");
+  $primary: map-get($theme, "primary");
+  $secondary: map-get($theme, "secondary");
+  $error: map-get($theme, "error");
+  $warn: map-get($theme, "warn");
+  $success: map-get($theme, "success");
+  $text-light: map-get($theme, "text-light");
+  $text-dark: map-get($theme, "text-dark");
+
   .gi-form-group {
     margin-bottom: 10px;
+    display: block;
 
     label {
       display: inline-block;
@@ -23,16 +44,49 @@
       white-space: pre-wrap;
 
       &.invalid {
-        outline-color: firebrick !important;
-        border: 1px solid firebrick !important;
+        outline-color: $error !important;
+        border: 1px solid $error !important;
       }
 
       &.ng-dirty {
         &.ng-invalid {
-          outline-color: firebrick !important;
-          border: 1px solid firebrick !important;
+          outline-color: $error !important;
+          border: 1px solid $error !important;
         }
       }
+    }
+  }
+
+  .gi-button {
+    background-color: $primary;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: $text-light;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    margin: 2px 2px;
+
+    &.gi-button-primary {
+      @include gi-button-base($primary);
+    }
+
+    &.gi-button-secondary {
+      @include gi-button-base($secondary);
+    }
+
+    &.gi-button-error {
+      @include gi-button-base($error);
+    }
+
+    &.gi-button-warn {
+      @include gi-button-base($warn);
+    }
+
+    &.gi-button-success {
+      @include gi-button-base($success);
     }
   }
 }

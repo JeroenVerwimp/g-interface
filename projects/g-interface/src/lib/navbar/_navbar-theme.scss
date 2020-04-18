@@ -4,6 +4,9 @@
   $background: map-get($theme, "background");
   $primary: map-get($theme, "primary");
   $secondary: map-get($theme, "secondary");
+  $error: map-get($theme, "error");
+  $warn: map-get($theme, "warn");
+  $success: map-get($theme, "success");
   $text-light: map-get($theme, "text-light");
   $text-dark: map-get($theme, "text-dark");
 

@@ -1,52 +1,73 @@
 
-<div class="form-group">
+<gi-form-group>
   <label>Text</label>
   <input type="text" placeholder="Text" >
-</div>
+</gi-form-group>
 
-<div class="form-group">
+<gi-form-group>
   <label>Search</label>
   <input type="search" placeholder="Search terms" >
-</div>
+</gi-form-group>
 
-<div class="form-group">
+<gi-form-group>
   <label>Tel</label>
   <input type="tel" placeholder="Ex. (+32)2 345 67 89" >
-</div>
+</gi-form-group>
 
-<div class="form-group">
+<gi-form-group>
   <label>Email</label>
   <input type="email" placeholder="john.doe@example.com" >
-</div>
+</gi-form-group>
 
-<div class="form-group">
+<gi-form-group>
   <label>Url</label>
   <input type="url" placeholder="example.com" >
-</div>
+</gi-form-group>
 
-<div class="form-group">
+<gi-form-group>
   <label>Password*</label>
   <input class="invalid" type="password" placeholder="Ex. Eq9Re_54sqd$" >
   <span class="error">A password is required.</span>
-</div>
-
-<div class="form-group">
-  <label>Textarea</label>
-  <textarea cols="30" rows="10"></textarea>
-</div>
-
-<br>
-<br>
-<br>
+</gi-form-group>
 
 <gi-form-group>
-  <label>First name:</label>
-  <input gi-input type="text">
+  <label>Textarea</label>
+  <textarea cols="30" rows="10"></textarea>
 </gi-form-group>
 
 <br>
 <br>
 <br>
+
+<h1>Buttons</h1>
+
+<a gi-button disabled href="#" (click)="test()">Button</a>
+
+<br>
+<br>
+<br>
+
+<button gi-button disabled (click)="test()" color="primary">Primary</button>
+<button gi-button disabled (click)="test()" color="secondary">Secondary</button>
+<button gi-button disabled (click)="test()" color="error">Error</button>
+<button gi-button disabled (click)="test()" color="warn">Warn</button>
+<button gi-button disabled (click)="test()" color="success">Success</button>
+
+<br>
+
+<button gi-button (click)="test()" color="primary">Primary</button>
+<button gi-button (click)="test()" color="secondary">Secondary</button>
+<button gi-button (click)="test()" color="error">Error</button>
+<button gi-button (click)="test()" color="warn">Warn</button>
+<button gi-button (click)="test()" color="success">Success</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <input type="button" value="">
 <input type="checkbox" name="" id="">
 <input type="color" name="" id="">

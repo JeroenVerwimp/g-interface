@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'gitest-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.sass']
+  selector: "gitest-form",
+  templateUrl: "./form.component.html",
+  styleUrls: ["./form.component.sass"],
 })
 export class FormComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  test() {
+    console.log("test");
   }
-
 }

@@ -19,7 +19,7 @@ import { SidebarNavComponent } from "../..";
   },
   encapsulation: ViewEncapsulation.None,
 })
-export class SidebarNavItemComponent implements AfterContentInit {
+export class SidebarNavItemComponent {
   private _disabled: boolean;
   public get disabled(): boolean {
     return this._disabled || !!(this._navList && this._navList.disabled);
@@ -33,9 +33,5 @@ export class SidebarNavItemComponent implements AfterContentInit {
 
   constructor(@Optional() navList?: SidebarNavComponent) {
     this._navList = navList;
-  }
-
-  ngAfterContentInit(): void {
-    console.log(this._navList);
   }
 }
