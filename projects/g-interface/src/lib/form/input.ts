@@ -20,7 +20,7 @@ export class GiInputDirective {}
   template: "<span><ng-content></ng-content></span>",
   inputs: ["disabled"],
   host: {
-    "[attr.disabled]": "disabled || null",
+    "[attr.disabled]": "disabled",
     "(click)": "_haltDisabledEvents($event)",
   },
 })
@@ -49,7 +49,7 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {
     if (this.color) {
       this.classList += "gi-button-" + this.color;
-      this.classList += this.disabled ? " gi-button-disabled" : "";
+      this.classList += this.disabled ? " gi-button-disabled" : ""; // TODO what was i thinking?!
     }
   }
 

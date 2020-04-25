@@ -9,7 +9,7 @@
 
       <gi-sidebar-nav-header>Main navigation</gi-sidebar-nav-header>
 
-      <a gi-sidebar-nav-item [disabled]="true" routerLink="/" routerLinkActive="active">
+      <a gi-sidebar-nav-item [disabled]="true" routerLink="/dashboard" routerLinkActive="active">
         <div class="nav-item">
           <i class="material-icons-outlined">dashboard</i>
           <span class="text">Dashboard</span>
@@ -23,18 +23,19 @@
         </div>
       </a>
 
-      <a gi-sidebar-nav-item href="javascript:void(0)">
+      <a gi-sidebar-nav-item routerLink="/blades">
         <div class="nav-item">
           <i class="material-icons-outlined">open_in_new</i>
-          <span class="text">Master/Detail</span>
+          <span class="text">Blades</span>
         </div>
       </a>
-      <a gi-sidebar-nav-item href="javascript:void(0)">
+
+      <!-- <a gi-sidebar-nav-item href="javascript:void(0)">
         <div class="nav-item">
           <i class="material-icons-outlined">toc</i>
           <span class="text">Table</span>
         </div>
-      </a>
+      </a> -->
 
       <div class="flex-spacer"></div>
 

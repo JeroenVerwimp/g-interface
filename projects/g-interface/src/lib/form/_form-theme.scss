@@ -5,6 +5,10 @@
     background-color: desaturate($color, 20);
     cursor: default;
   }
+
+  &:hover {
+    background-color: lighten(saturate($color, 5), 5);
+  }
 }
 
 @mixin gi-form-theme($theme) {
@@ -39,11 +43,12 @@
       padding: 10px 16px;
       border: 1px solid #ccc;
       display: inline-block;
-      border-radius: 4px;
+      border-radius: 2px;
       resize: none;
       white-space: pre-wrap;
 
-      &.invalid {
+      &.invalid,
+      &.ng-dirty.ng-invalid {
         outline-color: $error !important;
         border: 1px solid $error !important;
       }
@@ -55,12 +60,18 @@
         }
       }
     }
+
+    .error {
+      color: $error;
+      font-size: 0.8em;
+      padding-left: 10px;
+    }
   }
 
   .gi-button {
     background-color: $primary;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 8px 20px;
+    border-radius: 2px;
     color: $text-light;
     text-decoration: none;
     cursor: pointer;

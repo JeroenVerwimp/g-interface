@@ -1,0 +1,17 @@
+<gi-blade-content>
+  <div gi-blade-header>
+    <h1 gi-blade-title>Blade One</h1>
+    <p gi-blade-sub>This is a description of the first blade in the current bladestack.</p>
+  </div>
+
+  <gi-form-group>
+    <label>Enter your name</label>
+    <input type="text" placeholder="Ex. John Doe" [(ngModel)]="name" >
+  </gi-form-group>
+
+  <div gi-blade-actions>
+    <button gi-button (click)="openTwo()">Open Blade 2</button>
+    <button gi-button color="error" (click)="close()">close 1</button>
+  </div>
+</gi-blade-content>
+

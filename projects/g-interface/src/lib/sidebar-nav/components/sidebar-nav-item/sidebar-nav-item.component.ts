@@ -1,13 +1,5 @@
-import {
-  Component,
-  Input,
-  ViewEncapsulation,
-  Optional,
-  AfterContentInit,
-  Directive,
-  ElementRef,
-} from "@angular/core";
-import { SidebarNavComponent } from "../..";
+import { Component, Input, ViewEncapsulation, Optional } from "@angular/core";
+import { SidebarNavComponent } from "../sidebar-nav/sidebar-nav.component";
 
 @Component({
   selector: "gi-sidebar-nav-item, a[gi-sidebar-nav-item]",

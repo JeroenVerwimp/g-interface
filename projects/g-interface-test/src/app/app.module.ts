@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -8,13 +9,26 @@ import {
   GiSidebarNavModule,
   GiNavbarModule,
   GiFormModule,
+  GiBladeModule,
 } from "g-interface";
+
 import { LayoutComponent } from "./components/layout/layout.component";
 import { HomeComponent } from "./components/home/home.component";
 import { FormComponent } from "./components/form/form.component";
+import { BladesComponent } from "./components/blades/blades.component";
+import { ExampleBladeOneComponent } from "./components/blades/example-blade-one/example-blade-one.component";
+import { ExampleBladeTwoComponent } from "./components/blades/example-blade-two/example-blade-two.component";
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, HomeComponent, FormComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    HomeComponent,
+    FormComponent,
+    BladesComponent,
+    ExampleBladeOneComponent,
+    ExampleBladeTwoComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,6 +36,8 @@ import { FormComponent } from "./components/form/form.component";
     GiSidebarNavModule,
     GiNavbarModule,
     GiFormModule,
+    GiBladeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
