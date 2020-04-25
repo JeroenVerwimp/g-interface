@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from "@angular/core";
+import { Component, ViewEncapsulation, Input } from "@angular/core";
 
 @Component({
   selector: "gi-sidebar-nav",
@@ -19,6 +19,4 @@ export class SidebarNavComponent {
   public set disabled(v: boolean) {
     this._disabled = v;
   }
-
-  ngOnInit(): void {}
 }

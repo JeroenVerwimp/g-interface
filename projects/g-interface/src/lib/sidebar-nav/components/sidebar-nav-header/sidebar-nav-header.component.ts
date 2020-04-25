@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "gi-sidebar-nav-header",
@@ -7,8 +7,6 @@ import { Component, OnInit } from "@angular/core";
     class: "gi-sidebar-nav-header",
   },
 })
-export class SidebarNavHeaderComponent implements OnInit {
+export class SidebarNavHeaderComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }
