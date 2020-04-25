@@ -2,12 +2,18 @@
   background-color: $color;
 
   &.gi-button-disabled {
-    background-color: desaturate($color, 20);
+    background-color: darken(desaturate($color, 12), 5);
     cursor: default;
   }
 
   &:hover {
     background-color: lighten(saturate($color, 5), 5);
+  }
+
+  &.gi-button-outline {
+    background-color: transparent;
+    border: 1px solid $color;
+    color: $color;
   }
 }
 
@@ -79,6 +85,11 @@
     display: inline-block;
     border: none;
     margin: 2px 2px;
+    font-size: 0.9em;
+
+    &.gi-button-outline {
+      padding: 8px 19px;
+    }
 
     &.gi-button-primary {
       @include gi-button-base($primary);

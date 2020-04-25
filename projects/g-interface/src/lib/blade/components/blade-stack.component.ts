@@ -1,4 +1,4 @@
-import { Component, OnInit, Type } from "@angular/core";
+import { Component, Type } from "@angular/core";
 import { BladeOptions, GiBladeRef, InternalBlade } from "../blade-models";
 
 @Component({
@@ -21,14 +21,12 @@ import { BladeOptions, GiBladeRef, InternalBlade } from "../blade-models";
     class: "gi-blade-stack",
   },
 })
-export class BladeStackComponent implements OnInit {
+export class BladeStackComponent {
   _bladeStack: InternalBlade<any>[];
 
   constructor() {
     this._bladeStack = [];
   }
-
-  ngOnInit(): void {}
 
   public addBlade<T, D = any, R = any>(
     componentType: Type<T>,
