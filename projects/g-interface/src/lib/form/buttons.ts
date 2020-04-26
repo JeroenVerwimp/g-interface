@@ -5,7 +5,7 @@ import { Component, Input, HostBinding } from "@angular/core";
   template: "<span><ng-content></ng-content></span>",
   inputs: ["disabled"],
   host: {
-    "[attr.disabled]": "disabled",
+    "[attr.disabled]": "disabled || null",
     "(click)": "_haltDisabledEvents($event)",
   },
 })
@@ -33,10 +33,10 @@ export class ButtonComponent {
   private _disabled: boolean;
 
   @Input()
-  get disabled() {
+  get disabled(): boolean {
     return this._disabled;
   }
-  set disabled(value: any) {
+  set disabled(value: boolean) {
     this._disabled = value != null && `${value}` !== "false";
   }
 

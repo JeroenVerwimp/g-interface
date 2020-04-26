@@ -2,7 +2,7 @@
   background-color: $color;
 
   &.gi-button-disabled {
-    background-color: darken(desaturate($color, 12), 5);
+    background-color: darken(desaturate($color, 15), 20);
     cursor: default;
   }
 
@@ -11,9 +11,19 @@
   }
 
   &.gi-button-outline {
-    background-color: transparent;
     border: 1px solid $color;
     color: $color;
+    background-color: transparentize(lighten(saturate($color, 5), 10), 0.95);
+
+    &.gi-button-disabled {
+      border-color: darken(desaturate($color, 15), 20);
+      color: darken($color, 30);
+      background-color: transparentize(darken(desaturate($color, 8), 20), 0.7);
+    }
+
+    &:hover {
+      background-color: transparentize(lighten(saturate($color, 5), 5), 0.9);
+    }
   }
 }
 
@@ -86,9 +96,15 @@
     border: none;
     margin: 2px 2px;
     font-size: 0.9em;
+    user-select: none;
+
+    &.gi-button-disabled {
+      color: darken($text-light, 25);
+    }
 
     &.gi-button-outline {
       padding: 8px 19px;
+      background-color: transparent;
     }
 
     &.gi-button-primary {

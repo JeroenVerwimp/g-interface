@@ -4,6 +4,11 @@ An angular library that contains components and utilities that I use in multiple
 
 ## Changelog
 
+v0.0.5:
+
+- fixed disabled buttons
+- modified button styles
+
 v0.0.4:
 
 - added blades

@@ -6,6 +6,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./form.component.sass"],
 })
 export class FormComponent implements OnInit {
+
+  checked: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}
