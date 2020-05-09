@@ -82,6 +82,13 @@
       font-size: 0.8em;
       padding-left: 10px;
     }
+
+    &.gi-form-group-invalid {
+      label,
+      .gi-label {
+        color: $error;
+      }
+    }
   }
 
   .gi-button {

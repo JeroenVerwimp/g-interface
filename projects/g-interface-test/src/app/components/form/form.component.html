@@ -1,3 +1,24 @@
+<h2>ExampleForm</h2>
+<form [formGroup]="formGroup">
+
+  <gi-form-group>
+    <gi-label>Name</gi-label>
+    <input gi-input type="text" formControlName="name" placeholder="bv. John  Doe">
+  </gi-form-group>
+
+  <gi-form-group>
+    <gi-label>Email</gi-label>
+    <input gi-input type="text" formControlName="email" placeholder="bv. john.doe@email.com">
+  </gi-form-group>
+
+  <button gi-button [disabled]="!formGroup.valid" (click)="submit()" color="primary">Send</button>
+
+</form>
+
+<br>
+<br>
+<br>
+
 
 <gi-form-group>
   <label>Text</label>
