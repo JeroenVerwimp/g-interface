@@ -20,7 +20,5 @@ export class GiInputDirective {
     return this._control && this._control.dirty;
   }
 
-  constructor(private _control: NgControl) {
-    console.log(<any>_control);
-  }
+  constructor(private _control: NgControl) {}
 }

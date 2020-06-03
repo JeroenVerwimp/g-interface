@@ -1,0 +1,28 @@
+@import "~@angular/cdk/overlay";
+
+@mixin gi-toast-theme($theme) {
+  $dark: map-get($theme, "dark");
+  $light: map-get($theme, "light");
+  $background: map-get($theme, "background");
+  $primary: map-get($theme, "primary");
+  $secondary: map-get($theme, "secondary");
+  $error: map-get($theme, "error");
+  $warn: map-get($theme, "warn");
+  $success: map-get($theme, "success");
+  $text-light: map-get($theme, "text-light");
+  $text-dark: map-get($theme, "text-dark");
+
+  @include cdk-overlay();
+
+  .gi-toast {
+    display: flex;
+    background-color: $background;
+    padding: 10px 20px;
+    box-shadow: 6px 6px 25px -5px rgba(0,0,0,0.16);
+    margin-bottom: 5px;
+
+    p {
+      margin: 0;
+    }
+  }
+}

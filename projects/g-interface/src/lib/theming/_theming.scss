@@ -3,6 +3,8 @@
 @import "../navbar/navbar-theme";
 @import "../form/form-theme";
 @import "../blade/blade-theme";
+@import "../menu/menu-theme";
+@import "../toast/toast-theme";
 
 @mixin g-interface-core() {
   body,
@@ -36,4 +38,6 @@
   @include gi-navbar-theme($theme);
   @include gi-form-theme($theme);
   @include gi-blade-theme($theme);
+  @include gi-menu-theme($theme);
+  @include gi-toast-theme($theme);
 }

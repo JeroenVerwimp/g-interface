@@ -23,7 +23,12 @@ export class FormGroupComponent implements AfterViewInit {
 
   @HostBinding("class.gi-form-group-invalid")
   get invalid(): boolean {
-    return this._input.touched && this._input.dirty && !this._input.valid;
+    return (
+      this._input &&
+      this._input.touched &&
+      this._input.dirty &&
+      !this._input.valid
+    );
   }
 
   ngAfterViewInit(): void {}

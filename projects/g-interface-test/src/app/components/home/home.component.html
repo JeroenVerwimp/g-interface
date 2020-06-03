@@ -1,1 +1,61 @@
 Hello
+
+<button (click)="showToast('info')">Info</button>
+<button (click)="showToast('success')">Success</button>
+<button (click)="showToast('warning')">Warning</button>
+
+<br>
+<br>
+
+<gi-menu>
+  <gi-menu-item label="Something">
+    <gi-menu>
+      <gi-menu-item label="Foo"></gi-menu-item>
+      <gi-menu-item label="Bar">
+        <gi-menu>
+          <gi-menu-item label="Bar"></gi-menu-item>
+          <gi-menu-item label="quux"></gi-menu-item>
+        </gi-menu>
+      </gi-menu-item>
+    </gi-menu>
+  </gi-menu-item>
+</gi-menu>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<gi-toolbar>
+  <gi-menu>
+    <gi-menu-item label="File">
+      <gi-menu>
+        <gi-menu-item label="Save" (selected)="click('save')"></gi-menu-item>
+        <gi-menu-item label="Load" (selected)="click('load')"></gi-menu-item>
+        <gi-menu-item label="Export" (selected)="click('export-click')">
+          <gi-menu>
+            <gi-menu-item label="PDF" (selected)="click('pdf')"></gi-menu-item>
+            <gi-menu-item label="PNG" (selected)="click('png')"></gi-menu-item>
+            <gi-menu-item label="JPG" (selected)="click('jpg')"></gi-menu-item>
+            <gi-menu-item label="XML" (selected)="click('xml')"></gi-menu-item>
+          </gi-menu>
+        </gi-menu-item>
+        <gi-menu-spacer></gi-menu-spacer>
+        <gi-menu-item label="Exit" (selected)="click('edit')"></gi-menu-item>
+      </gi-menu>
+    </gi-menu-item>
+    <gi-menu-spacer></gi-menu-spacer>
+    <gi-menu-item (selected)="click('other')">
+        <div giMenuItemContent style="display: flex;">
+          <i class="material-icons-outlined">open_in_new</i>
+          <span class="text">Blades</span>
+        </div>
+    </gi-menu-item>
+  </gi-menu>
+</gi-toolbar>
+
+Some other content
+
+<br>
+<br>
